@@ -415,7 +415,9 @@ def default_user_schema():
         'reset_key': [ignore],
         'activity_streams_email_notifications': [ignore_missing],
         'state': [ignore_missing],
+        'email' = [not_empty, user_email_validator, unicode]
     }
+   
     return schema
 
 def user_new_form_schema():
